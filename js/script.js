@@ -7,10 +7,15 @@ const menuLogin = document.querySelector(".menu-login")
 const buttonPlay = document.querySelector(".btn-play")
 const menuGameOver = document.querySelector(".menu-gameOver")
 const buttonPlayAgain = document.querySelector(".btn-playAgain")
+const btnLeft = document.getElementById('btn-left')
+const btnRight = document.getElementById('btn-right')
+const btnDown = document.getElementById('btn-down')
+const btnDrop = document.getElementById('btn-drop')
+const btnRotate = document.getElementById('btn-rotate')
 const record = document.querySelector(".record > span")
-const btnShowRecord = document.querySelector('.btn-show-record');
-const btnCloseRecord = document.querySelector('.btn-close-record');
-const recordWindow = document.querySelector('.record-window');
+const btnShowRecord = document.querySelector('.btn-show-record')
+const btnCloseRecord = document.querySelector('.btn-close-record')
+const recordWindow = document.querySelector('.record-window')
 const backgroundMusic = new Audio("../assets/background-music.mp3")
 const sfxMove = new Audio("../assets/move.mp3")
 const sfxDrop = new Audio("../assets/drop.mp3")
@@ -547,20 +552,20 @@ buttonPlayAgain.addEventListener("click", () => {
     update()
 })
 
-document.getElementById("btn-left").addEventListener("click", () => {
+btnLeft.addEventListener("click", () => {
     moveHorizontal(-1)
 })
-document.getElementById("btn-right").addEventListener("click", () => {
+btnRight.addEventListener("click", () => {
     moveHorizontal(1)
 })
-document.getElementById("btn-down").addEventListener("click", () => {
+btnDown.addEventListener("click", () => {
     moveDown()
 })
-document.getElementById("btn-rotate").addEventListener("click", () => {
+btnRotate.addEventListener("click", () => {
     tryRotate(rotateMatrixClockwise)
     draw()
 })
-document.getElementById("btn-drop").addEventListener("click", () => hardDrop())
+btnDrop.addEventListener("click", () => hardDrop())
 
 const updateRecordDisplay = () => {
   const record = localStorage.getItem('record') || 0
