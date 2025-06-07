@@ -11,11 +11,11 @@ const record = document.querySelector(".record > span")
 const btnShowRecord = document.querySelector('.btn-show-record');
 const btnCloseRecord = document.querySelector('.btn-close-record');
 const recordWindow = document.querySelector('.record-window');
-const backgroundMusic = new Audio("/tetris-game/assets/background-music.mp3")
-const sfxMove = new Audio("/tetris-game/assets/move.mp3")
-const sfxDrop = new Audio("/tetris-game/assets/drop.mp3")
-const sfxClear = new Audio("/tetris-game/assets/clear.mp3")
-const sfxGameOver = new Audio("/tetris-game/assets/gameover.mp3")
+const backgroundMusic = new Audio("/projeto-tetris/assets/background-music.mp3")
+const sfxMove = new Audio("/projeto-tetris/assets/move.mp3")
+const sfxDrop = new Audio("/projeto-tetris/assets/drop.mp3")
+const sfxClear = new Audio("/projeto-tetris/assets/clear.mp3")
+const sfxGameOver = new Audio("/projeto-tetris/assets/gameover.mp3")
 
 backgroundMusic.loop = true
 backgroundMusic.volume = 0.3
