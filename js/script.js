@@ -547,14 +547,20 @@ buttonPlayAgain.addEventListener("click", () => {
     update()
 })
 
-document.getElementById("btn-left").addEventListener("touchstart", {passive: true}, () => moveHorizontal(-1))
-document.getElementById("btn-right").addEventListener("touchstart", {passive: true}, () => moveHorizontal(1))
-document.getElementById("btn-down").addEventListener("touchstart", {passive: true}, () => moveDown())
-document.getElementById("btn-rotate").addEventListener("touchstart", {passive: true}, () => {
+document.getElementById("btn-left").addEventListener("click", () => {
+    moveHorizontal(-1)
+})
+document.getElementById("btn-right").addEventListener("click", () => {
+    moveHorizontal(1)
+})
+document.getElementById("btn-down").addEventListener("click", () => {
+    moveDown()
+})
+document.getElementById("btn-rotate").addEventListener("click", () => {
     tryRotate(rotateMatrixClockwise)
     draw()
 })
-document.getElementById("btn-drop").addEventListener("touchstart", () => hardDrop())
+document.getElementById("btn-drop").addEventListener("click", () => hardDrop())
 
 const updateRecordDisplay = () => {
   const record = localStorage.getItem('record') || 0
