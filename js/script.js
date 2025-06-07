@@ -11,11 +11,11 @@ const record = document.querySelector(".record > span")
 const btnShowRecord = document.querySelector('.btn-show-record');
 const btnCloseRecord = document.querySelector('.btn-close-record');
 const recordWindow = document.querySelector('.record-window');
-const backgroundMusic = new Audio("/projeto-tetris/assets/background-music.mp3")
-const sfxMove = new Audio("/projeto-tetris/assets/move.mp3")
-const sfxDrop = new Audio("/projeto-tetris/assets/drop.mp3")
-const sfxClear = new Audio("/projeto-tetris/assets/clear.mp3")
-const sfxGameOver = new Audio("/projeto-tetris/assets/gameover.mp3")
+const backgroundMusic = new Audio("../assets/background-music.mp3")
+const sfxMove = new Audio("../assets/move.mp3")
+const sfxDrop = new Audio("../assets/drop.mp3")
+const sfxClear = new Audio("../assets/clear.mp3")
+const sfxGameOver = new Audio("../assets/gameover.mp3")
 
 backgroundMusic.loop = true
 backgroundMusic.volume = 0.3
@@ -547,10 +547,10 @@ buttonPlayAgain.addEventListener("click", () => {
     update()
 })
 
-document.getElementById("btn-left").addEventListener("touchstart", () => moveHorizontal(-1))
-document.getElementById("btn-right").addEventListener("touchstart", () => moveHorizontal(1))
-document.getElementById("btn-down").addEventListener("touchstart", () => moveDown())
-document.getElementById("btn-rotate").addEventListener("touchstart", () => {
+document.getElementById("btn-left").addEventListener("touchstart", {passive: true}, () => moveHorizontal(-1))
+document.getElementById("btn-right").addEventListener("touchstart", {passive: true}, () => moveHorizontal(1))
+document.getElementById("btn-down").addEventListener("touchstart", {passive: true}, () => moveDown())
+document.getElementById("btn-rotate").addEventListener("touchstart", {passive: true}, () => {
     tryRotate(rotateMatrixClockwise)
     draw()
 })
