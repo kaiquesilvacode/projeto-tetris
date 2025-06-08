@@ -17,10 +17,10 @@ const btnShowRecord = document.querySelector('.btn-show-record')
 const btnCloseRecord = document.querySelector('.btn-close-record')
 const recordWindow = document.querySelector('.record-window')
 const backgroundMusic = new Audio("/projeto-tetris/assets/background-music.mp3")
-const sfxMove = new Audio("../assets/move.mp3")
-const sfxDrop = new Audio("../assets/drop.mp3")
-const sfxClear = new Audio("../assets/clear.mp3")
-const sfxGameOver = new Audio("../assets/gameover.mp3")
+const sfxMove = new Audio("/projeto-tetris/assets/move.mp3")
+const sfxDrop = new Audio("/projeto-tetris/assets/drop.mp3")
+const sfxClear = new Audio("/projeto-tetris/assets/clear.mp3")
+const sfxGameOver = new Audio("/projeto-tetris/assets/gameover.mp3")
 
 backgroundMusic.loop = true
 backgroundMusic.volume = 0.3
