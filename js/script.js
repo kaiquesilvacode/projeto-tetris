@@ -23,11 +23,11 @@ const sfxClear = new Audio("/projeto-tetris/assets/clear.mp3")
 const sfxGameOver = new Audio("/projeto-tetris/assets/gameover.mp3")
 
 backgroundMusic.loop = true
-backgroundMusic.volume = 0.3
-sfxGameOver.volume = 0.2
-sfxMove.volume = 0.2
-sfxDrop.volume = 0.2
-sfxClear.volume = 0.2
+backgroundMusic.volume = 0.2
+sfxGameOver.volume = 0.3
+sfxMove.volume = 0.3
+sfxDrop.volume = 0.3
+sfxClear.volume = 0.3
 
 const size = 40
 const cols = canvas.width / size // 10 colunas
